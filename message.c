@@ -6,7 +6,7 @@
 /*   By: jgamarra <jgamarra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 21:59:43 by jgamarra          #+#    #+#             */
-/*   Updated: 2024/12/07 12:32:27 by jgamarra         ###   ########.fr       */
+/*   Updated: 2024/12/07 13:18:00 by jgamarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	debug_msg_status(t_philo_status philo_status,
 		&& !get_bool(&philo->table->table_mutex, &philo->table->end_simulation))
 		printf(WHITE"%-6ld"GREEN" %ld is thinking\n"RESET, elapse, philo->id);
 	else if (philo_status == DIED)
-		printf(WHITE"%-6ld"RED" %ld is dead\n"RESET, elapse, philo->id);
+		printf(WHITE"%-6ld"RED" %ld is died\n"RESET, elapse, philo->id);
 }
 
 static void	info_msg_status(t_philo_status philo_status,
@@ -61,7 +61,7 @@ static void	info_msg_status(t_philo_status philo_status,
 		printf(WHITE"%-6ld"GREEN" %ld is thinking\n"RESET,
 			elapse, philo->id);
 	else if (philo_status == DIED)
-		printf(WHITE"%-6ld"RED" %ld is dead\n"RESET, elapse, philo->id);
+		printf(WHITE"%-6ld"RED" %ld is died\n"RESET, elapse, philo->id);
 }
 
 void	msg_status(t_philo_status philo_status, t_philo *philo, bool debug)
