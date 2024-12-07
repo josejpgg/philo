@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   dinner.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgamarra <jgamarra@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: jgamarra <jgamarra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 17:11:10 by jgamarra          #+#    #+#             */
-/*   Updated: 2024/12/07 11:07:49 by jgamarra         ###   ########.fr       */
+/*   Updated: 2024/12/07 12:26:26 by jgamarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-
 
 void	*dinner_alone(void *data)
 {
@@ -27,8 +25,6 @@ void	*dinner_alone(void *data)
 		usleep(200);
 	return (NULL);
 }
-
-
 
 void	*dinner_multiple(void *data)
 {

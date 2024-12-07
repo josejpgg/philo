@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgamarra <jgamarra@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: jgamarra <jgamarra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 00:18:21 by jgamarra          #+#    #+#             */
-/*   Updated: 2024/12/07 11:07:01 by jgamarra         ###   ########.fr       */
+/*   Updated: 2024/12/07 12:26:51 by jgamarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ typedef enum e_time_action
 	MILLISECOND,
 	MICROSECOND,
 }	t_time_action;
-
 
 typedef struct s_fork
 {
