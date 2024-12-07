@@ -10,21 +10,21 @@ SOURCE := main.c dinner.c getters_setters.c initialize.c message.c safe_func.c s
 COMPILE := ${SOURCE:.c=.o}
 COMPILE_BONUS := ${SOURCE_BONUS:.c=.o}
 
-all: lib philo
+all: philo
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 philo: $(COMPILE)
-	$(CC) $(FLAGS) $(COMPILE) $(LIBFT_NAME) -o ${PHILO_NAME}
+	$(CC) $(FLAGS) $(COMPILE) -o ${PHILO_NAME}
 
 clean:
 	@rm -rf $(COMPILE)
-	@make clean -C $(LIBFT_PATH)
+#	@make clean -C $(LIBFT_PATH)
 
 fclean:
 	@rm -rf ${PHILO_NAME}
-	@make fclean -C $(LIBFT_PATH)
+#	@make fclean -C $(LIBFT_PATH)
 	@rm -rf ${LIBFT_NAME}
 
 re: fclean clean all
@@ -62,6 +62,6 @@ leaksMac:
 	leaks --atExit --list -- ./philo 0 800 200 200
 
 leaksCampus:
-	valgrind --leak-check=yes ./philo 5 800 200 200
+	valgrind --leak-check=yes ./philo 5 800 200 200 7
 
-.PHONY: all clean fclean re lib
+.PHONY: philo all clean fclean re
