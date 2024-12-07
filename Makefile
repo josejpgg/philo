@@ -3,10 +3,12 @@ LIBFT_GH := https://github.com/josejpgg/libft_increment.git
 LIBFT_PATH := ./lib/libft/
 PHILO_NAME := philo
 CC = cc
-FLAGS = 
-# FLAGS = -Wall -Werror -Wextra
-FLAGS = -Wall -Werror -Wextra -fsanitize=address -g
-SOURCE := main.c dinner.c getters_setters.c initialize.c message.c safe_func.c synchro_utils.c utils.c monitor.c philo_action.c
+# FLAGS = 
+FLAGS = -Wall -Werror -Wextra
+# FLAGS = -Wall -Werror -Wextra -fsanitize=address -g
+SOURCE := main.c dinner.c getters_setters.c initialize.c \
+message.c safe_func.c synchro_utils.c utils.c \
+monitor.c philo_action.c
 COMPILE := ${SOURCE:.c=.o}
 COMPILE_BONUS := ${SOURCE_BONUS:.c=.o}
 
@@ -64,4 +66,4 @@ leaksMac:
 leaksCampus:
 	valgrind --leak-check=yes ./philo 5 800 200 200 7
 
-.PHONY: philo all clean fclean re
+.PHONY: all clean fclean re
