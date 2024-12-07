@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgamarra <jgamarra@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: jgamarra <jgamarra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 21:59:50 by jgamarra          #+#    #+#             */
-/*   Updated: 2024/12/06 18:43:41 by jgamarra         ###   ########.fr       */
+/*   Updated: 2024/12/07 12:42:24 by jgamarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ long	gettime(t_time_action time_action)
 	struct timeval	tv;
 
 	if (gettimeofday(&tv, NULL))
-		ft_exit_message("gettimeofday failed", 1);
+		return (0);
 	if (time_action == MILLISECOND)
 		return ((tv.tv_sec * 1e3) + (tv.tv_usec / 1e3));
 	else if (time_action == MICROSECOND)
 		return ((tv.tv_sec * 1e6) + tv.tv_usec);
-	else
-		ft_exit_message("wrong action", 1);
-	return (1);
+	return (0);
 }
 
 void	precise_usleep(long sleep_time, t_table *table)

@@ -6,26 +6,25 @@
 /*   By: jgamarra <jgamarra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 00:18:21 by jgamarra          #+#    #+#             */
-/*   Updated: 2024/12/07 12:32:50 by jgamarra         ###   ########.fr       */
+/*   Updated: 2024/12/07 12:43:12 by jgamarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H
 
-# include "lib/libft/libft.h"
-# include <stdio.h> // printf
-# include <stdlib.h> // malloc, free
-# include <string.h> // memset
-# include <unistd.h> // write, usleep
-# include <stdbool.h> // bool
-# include <sys/time.h> // gettimeofday
-# include <limits.h> // INT_MAX
-# include <pthread.h> // mutex threads
-# include <errno.h> // errno
-# define WHITE "\033[37m"  // ANSI escape code for white text
-# define RESET "\033[0m" // ANSI escape code to reset text formatting
-# define RED "\033[31m" // RED
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdbool.h>
+# include <sys/time.h>
+# include <limits.h>
+# include <pthread.h>
+# include <errno.h>
+# define WHITE "\033[37m"
+# define RESET "\033[0m"
+# define RED "\033[31m"
 # define CYAN "\033[1;36m"
 # define GREEN "\033[1;32m"
 # define YELLOW "\033[1;33m"
