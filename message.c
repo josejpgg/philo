@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   message.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgamarra <jgamarra@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: jgamarra <jgamarra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 21:59:43 by jgamarra          #+#    #+#             */
-/*   Updated: 2024/12/06 19:18:02 by jgamarra         ###   ########.fr       */
+/*   Updated: 2024/12/07 12:32:27 by jgamarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	msg_status(t_philo_status philo_status, t_philo *philo, bool debug)
 	if (get_bool(&philo->philo_mutex, &philo->enough_meals))
 		return ;
 	safe_mutex_handle(&philo->table->write_mutex, LOCK);
-	if (!debug)
+	if (debug)
 		debug_msg_status(philo_status, philo, elapse);
 	else
 		info_msg_status(philo_status, philo, elapse);

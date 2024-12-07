@@ -6,7 +6,7 @@
 /*   By: jgamarra <jgamarra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 00:18:21 by jgamarra          #+#    #+#             */
-/*   Updated: 2024/12/07 12:26:51 by jgamarra         ###   ########.fr       */
+/*   Updated: 2024/12/07 12:32:50 by jgamarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@
 # define GREEN "\033[1;32m"
 # define YELLOW "\033[1;33m"
 # define MAGENTA "\033[1;35m"
-
 # define DEBUG_MODE 0
 
 typedef pthread_mutex_t	t_mutex;
